@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect,browserHistory } from 
 // import axios from 'axios';
 
 import Header from '../components/header/Header.jsx';
+import Home from '../components/home/Home';
 
 export default class RouteApp extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ export default class RouteApp extends React.Component {
               <Header location={location} cart={cart}/>
             )
           }}/>
+          <Home />
         </div>
       </Router>
     );

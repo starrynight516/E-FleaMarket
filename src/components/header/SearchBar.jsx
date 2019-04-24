@@ -16,7 +16,7 @@ export default class SearchBar extends Component {
 
   componentDidMount() {
     axios
-    .get('../data/database.json')
+    .get('/data/database.json')
     .then(res => this.setState({
       lists: res.data,
     }))
@@ -47,6 +47,7 @@ export default class SearchBar extends Component {
         });
         return;
       }
+      
       const regSearch = new RegExp(this.state.value,'gim');
       let resultMatch = [];
 
